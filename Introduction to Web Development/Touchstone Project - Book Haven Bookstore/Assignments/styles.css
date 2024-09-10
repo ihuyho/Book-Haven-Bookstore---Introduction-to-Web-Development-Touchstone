@@ -27,19 +27,40 @@
     margin: 0px auto;
 }
 
-
-
 /*temporary, remove this line when fixed
 try display none and remove visibility and position later*/
+
+
+
 #hamburgermenu #hamburgermenulinks {
     visibility: hidden;
     position: absolute;
+    right: 0px;
     list-style-type: none;
+    width: 100px;
+    justify-content: right;
+    flex-direction: column;
+    height: 70px;
+    background-color: white;
+    padding: 10px;
+    font-size: 14px;
+    right: 8px;
+    top: 35px;
+    border: black solid 1px;
+}
+
+#hamburgermenu #hamburgermenuicon button{
+    border: none;
+    background-color: white;
+    font-size: 16px;
+}
+
+#hamburgermenulinks a {
+    text-decoration: none;
 }
 
 #hamburgermenu:hover #hamburgermenulinks {
     visibility: visible;
-    display: block;
 }
 
 #shoppingcart {
