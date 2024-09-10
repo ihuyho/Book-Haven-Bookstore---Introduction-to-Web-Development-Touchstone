@@ -1,0 +1,29 @@
+header section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+#headerLogo {
+    width: 25px;
+}
+
+.headerButtons {
+    display: flex;
+    
+}
+
+#mainPromo1 {
+    flex-grow: 1;
+    max-width: 100%;
+    height: auto;
+}
+
+.bannerPromo {
+    height: 100px;
+    overflow: hidden;
+}
