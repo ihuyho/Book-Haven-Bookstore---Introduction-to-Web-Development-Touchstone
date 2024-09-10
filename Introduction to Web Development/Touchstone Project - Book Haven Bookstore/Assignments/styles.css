@@ -6,10 +6,33 @@
     display: none;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 #webtitle {
     display: flex;
     justify-content: center;
     margin: auto auto 5px;
+}
+#logosearch {
+    display: flex;
+}
+
+#headerlogo {
+    margin-right: 10px;
+    width: 25px
+}
+
+#searchbar {
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+#searchbar input{
+    width: 280px;
 }
 
 /*change this min width to 480 after done and erase this message*/
@@ -80,18 +103,9 @@
     opacity: 100%;
 }
 
-header section{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 .justifyCenter {
     justify-content: center;
-}
-
-#headerLogo {
-    width: 25px;
 }
 
 #headerbuttons {
