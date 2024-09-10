@@ -6,10 +6,50 @@
     display: none;
 }
 
-@media all and (min-width:480px) {
+/*change this min width to 480 after done and erase this message*/
+@media all and (min-width:700px) {
     #fullmenu {
-        display: contents;
+        display: block;
     }
+    #shoppingcart {
+        display: none;
+    }
+
+    #hamburgermenu{
+        display: none;
+    }
+}
+
+#hamburgermenuicon {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    margin: 0px auto;
+}
+
+
+
+/*temporary, remove this line when fixed
+try display none and remove visibility and position later*/
+#hamburgermenu #hamburgermenulinks {
+    visibility: hidden;
+    position: absolute;
+    list-style-type: none;
+}
+
+#hamburgermenu:hover #hamburgermenulinks {
+    visibility: visible;
+    display: block;
+}
+
+#shoppingcart {
+    opacity: 50%;
+    color: rgb(61, 84, 216);
+    width: 25px;
+}
+
+#shoppingcart:hover {
+    opacity: 100%;
 }
 
 header section{
@@ -26,7 +66,7 @@ header section{
     width: 25px;
 }
 
-.headerbuttons {
+#headerbuttons {
     display: flex;
     
 }
@@ -41,3 +81,4 @@ header section{
     height: 100px;
     overflow: hidden;
 }
+
