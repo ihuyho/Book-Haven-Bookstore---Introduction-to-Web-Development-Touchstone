@@ -6,6 +6,12 @@
     display: none;
 }
 
+#webtitle {
+    display: flex;
+    justify-content: center;
+    margin: auto auto 5px;
+}
+
 /*change this min width to 480 after done and erase this message*/
 @media all and (min-width:700px) {
     #fullmenu {
@@ -25,12 +31,8 @@
     position: relative;
     justify-content: flex-end;
     margin: 0px auto;
+    
 }
-
-/*temporary, remove this line when fixed
-try display none and remove visibility and position later*/
-
-
 
 #hamburgermenu #hamburgermenulinks {
     visibility: hidden;
@@ -40,7 +42,7 @@ try display none and remove visibility and position later*/
     width: 100px;
     justify-content: right;
     flex-direction: column;
-    height: 70px;
+    height: 55px;
     background-color: white;
     padding: 10px;
     font-size: 14px;
@@ -53,6 +55,7 @@ try display none and remove visibility and position later*/
     border: none;
     background-color: white;
     font-size: 16px;
+    padding: auto 2px;
 }
 
 #hamburgermenulinks a {
@@ -67,6 +70,10 @@ try display none and remove visibility and position later*/
     opacity: 50%;
     color: rgb(61, 84, 216);
     width: 25px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 3px;
 }
 
 #shoppingcart:hover {
