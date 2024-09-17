@@ -1,5 +1,11 @@
+/*header section*/
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    font-size: 62.4%;
 }
 
 #fullmenu {
@@ -16,9 +22,13 @@
     display: flex;
     justify-content: center;
     margin: auto auto 5px;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 #logosearch {
     display: flex;
+    flex: 1;
+    align-items: center;
 }
 
 #headerlogo {
@@ -27,16 +37,20 @@
 }
 
 #searchbar {
-    width: 300px;
-    display: flex;
+    
+    display: block;
     align-items: center;
+    flex: 1;
 }
 #searchbar input{
-    width: 280px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px black solid;
+
 }
 
 /*change this min width to 480 after done and erase this message*/
-@media all and (min-width:700px) {
+@media all and (min-width:480px) {
     #fullmenu {
         display: block;
     }
@@ -91,21 +105,21 @@
 
 #shoppingcart {
     opacity: 50%;
-    color: rgb(61, 84, 216);
     width: 25px;
     display: flex;
     justify-content: right;
     align-items: center;
     padding-right: 3px;
+    
+}
+
+#shoppingcart i {
+    color: #3f5461;
+    font-size: 1.6rem;
 }
 
 #shoppingcart:hover {
     opacity: 100%;
-}
-
-
-.justifyCenter {
-    justify-content: center;
 }
 
 #headerbuttons {
@@ -113,14 +127,60 @@
     
 }
 
-#mainPromo1 {
+
+/*main promo*/
+
+#mainPromo {
+    position: relative;
     flex-grow: 1;
-    max-width: 100%;
-    height: auto;
+    overflow: hidden;
+    flex-shrink: 1;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
 }
 
-.bannerPromo {
-    height: 100px;
+#mainPromo img {
+    top: 0;
+    width: 100%;
+    display: flex;
+    position: relative ;
+}
+
+#mainPromoText {
+    text-align: right;
+    position: absolute;
+    color: white;
+    width: 150px;
+    font-size: 4rem;
+    right: 50px;
+    text-shadow: 3px 3px 2px black;
+    margin: auto 0;
+}
+
+#bannerPromo1 {
+    height: 90px;
     overflow: hidden;
+    position: relative;
+    
+}
+
+#bannerpromo img {
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+#bannerPromoText1 {
+    color: white;
+    width: 100%;
+    font-size: 3.5rem;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    top: 0;
+
 }
 

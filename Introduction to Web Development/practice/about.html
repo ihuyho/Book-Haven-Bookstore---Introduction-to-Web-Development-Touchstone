@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First Page - About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width">
+    <script src="https://kit.fontawesome.com/6811630ecf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>About Us</header>
+    <nav>
+        Nav
+        <div id="fullmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+        </div>
+        <div id="burgermenu">
+            <svg xmlns="http://www.w3.org/2000/svg" height="2.0em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            <ul id="burgermenulinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Welcome to Book Haven Bookstore</h1>
+    <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2>Contact Us</h2>
+    <form action="" method="post" id="contactusform">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label>First Name: <input type="text" name="firstname" required></label><br>
+            <label>Last Name: <input type="text" name="lastname" required></label><br>
+            <label>Phone: <input type="tel" name="phonenumber" placeholder="(123) 456-7890"></label><br>
+            <label>Email: <input type="email" name="email" required></label><br>
+        </fieldset><br>
+        <label>How many days per week do you visit the shop?:<input type="number" name="frequency" min="0" max="7" required></label><br>
+        <label>Reason for communication:
+            <select name="commenttype">
+                <optgroup label="Feedback">
+                    <option value="comment">Comment</option>
+                    <option value="compliment">Compliment</option>
+                    <option value="complaint">Complaint</option>
+                </optgroup>
+                <optgroup label="Request">
+                    <option value="catering">Catering</option>
+                    <option value="suggestion">Suggestion</option>
+                </optgroup>
+            </select>
+        </label><br>
+        <label>Comments:</label><br>
+        <textarea placeholder="Write your comment here..." required></textarea><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+        </div>
+    </form>
+</body>
+</html>

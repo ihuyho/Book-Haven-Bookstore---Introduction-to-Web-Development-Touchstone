@@ -1,0 +1,6 @@
+names = []
+fin = open('names.txt', 'r')
+for line in fin:
+    line = line.replace("\n", "a")
+    names.append(line)
+print(names)
