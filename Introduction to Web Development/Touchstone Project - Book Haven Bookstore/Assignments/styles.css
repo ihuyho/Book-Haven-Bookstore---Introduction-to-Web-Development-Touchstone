@@ -189,6 +189,12 @@ html {
     display: flex;
     justify-content: center;
     margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+    height: 4rem;
+}
+
+.carouselTitle h1 {
+    margin-top: 0.5rem;
 }
 
 .carouselContainer {
@@ -196,7 +202,7 @@ html {
     grid-auto-flow: column;
     grid-auto-columns: 30%;
     overflow-x: auto;;
-    height: 25rem;
+    height: 27.5rem;
     overflow-y: hidden;
 }
 
@@ -208,13 +214,12 @@ html {
     width: 110px;
     display: flex;
     flex-direction: column;
-    height: 25rem;
+    height: 27.5rem;
 }
 
 .carouselContainer .mediaElements .carouselImage {
-    height: 200px;
+    height: 18rem;
     display: flex;
-    flex-grow: 1;
 }
 
 .carouselContainer .mediaElements .carouselImage img{
@@ -228,8 +233,8 @@ html {
 .carouselText {
     display: flex;
     flex-direction: column;
-    height: 8.5rem;
-    margin-top: 1rem;
+    height: 9rem;
+    margin-top: 0.5rem;
 }
 
 .carouselText h2,
@@ -256,6 +261,27 @@ html {
 .carouselText p {
     font-size: 1.1rem;
     margin-top: 0.5rem;
+}
+
+.buttonGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.buttonGrid button {
+    height: 4rem;
+    border-radius: 1rem;
+}
+
+.buttonGrid button h4 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
 }
 
 
