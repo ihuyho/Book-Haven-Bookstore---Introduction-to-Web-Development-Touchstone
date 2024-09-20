@@ -63,7 +63,7 @@
     </div>
 
     <hr>
-    <div class="slider" data-category="bestSellers">
+    <div class="primarySlider" data-category="bestSellers">
         <div class="carouselTitle">
             <h1>Best Sellers</h1>
         </div>
@@ -161,7 +161,7 @@
         </div>
     </div>
     <hr>
-    <div class="slider" data-category="favNewReleases">
+    <div class="primarySlider" data-category="favNewReleases">
         <div class="carouselTitle">
             <h1>Our Favorite New Releases</h1>
         </div>
@@ -259,7 +259,7 @@
         </div>
     </div>
     <hr>
-    <div class="slider" >
+    <div class="categorySlider" >
         <div class="carouselTitle">
             <h1>Shop Your Favorite Categories</h1>
         </div>
@@ -275,7 +275,7 @@
             <button><h4>Historical Fiction</h4></button>
             <button><h4>Self-Help</h4></button>
         </div>
-        <div class="carouselContainer" data-category="nonFiction">
+        <div class="carouselContainer" data-category="non-fiction">
             <div class="mediaElements">
                 <div class="carouselImage">
                     <img src="../Resources/want.jpg" alt="Want by Gillian Anderson book cover"/>
@@ -450,7 +450,7 @@
                 </div>
             </div>
         </div>
-        <div class="carouselContainer" data-category="mystery">
+        <div class="carouselContainer" data-category="mystery/-thriller">
             <div class="mediaElements">
                 <div class="carouselImage">
                     <img src="../Resources/we solve murders.jpg" alt="We Solve Murders by Richard Osman book cover"/>
@@ -625,7 +625,7 @@
                 </div>
             </div>
         </div>
-        <div class="carouselContainer" data-category="scifi">
+        <div class="carouselContainer" data-category="sci-fi">
             <div class="mediaElements">
                 <div class="carouselImage">
                     <img src="../Resources/dune.jpg" alt="Dune by Frank Herbert book cover"/>
@@ -809,7 +809,7 @@
                 </div>
             </div>
         </div>
-        <div class="carouselContainer" data-category="youngAdult">
+        <div class="carouselContainer" data-category="young-adult">
             <div class="mediaElements">
                 <div class="carouselImage">
                     <img src="../Resources/if he had been with me.jpg" alt="If He Had Been With Me by Laura Nowlin book cover"/>
@@ -984,7 +984,7 @@
                 </div>
             </div>
         </div>
-        <div class="carouselContainer" data-category="histFiction">
+        <div class="carouselContainer" data-category="historical-fiction">
             <div class="mediaElements">
                 <div class="carouselImage">
                     <img src="../Resources/north woods.jpg" alt="North Woods by Daniel Mason book cover"/>
@@ -1076,7 +1076,7 @@
                 </div>
             </div>
         </div>
-        <div class="carouselContainer" data-category="selfHelp">
+        <div class="carouselContainer" data-category="self-help">
             <div class="mediaElements">
                 <div class="carouselImage">
                     <img src="../Resources/ultra processed people.jpg" alt="Ultra-Processed People by Chris van Tulleken book cover"/>
@@ -1160,6 +1160,31 @@
             </div>
         </div>
     </div>
-    </section>
+    <script>
+        const buttons = document.querySelectorAll('.buttonGrid button');
+        const carouselContainers = document.querySelectorAll('.categorySlider .carouselContainer');
+
+        function showCategory(category) {
+            carouselContainers.forEach(container => {
+                container.style.display = 'none';
+            });
+
+            const selectedContainer = document.querySelector(`.carouselContainer[data-category="${category}"]`);
+            if (selectedContainer) {
+                selectedContainer.style.display = '';
+            }
+        }
+
+        window.onload = function() {
+            showCategory('non-fiction');
+        };
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.querySelector('h4').innerText.toLowerCase().replace(/ /g, '-');
+                showCategory(category);
+            });
+        });
+    </script>
 </body>
 </html>
