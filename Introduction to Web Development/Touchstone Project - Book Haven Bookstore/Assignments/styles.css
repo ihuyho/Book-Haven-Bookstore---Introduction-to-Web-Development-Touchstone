@@ -208,7 +208,7 @@ html {
     grid-auto-flow: column;
     grid-auto-columns: 30%;
     overflow-x: auto;;
-    height: 27.5rem;
+    height: 26rem;
     overflow-y: hidden;
 }
 
@@ -289,6 +289,25 @@ html {
     align-items: center;
     justify-content: center;
     color: black;
+}
+
+.seeMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.seeMore button {
+    border-radius: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seemore p {
+   margin-top: 2rem;
 }
 
 
