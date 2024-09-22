@@ -101,6 +101,9 @@ html {
 
 #hamburgermenu:hover #hamburgermenulinks {
     visibility: visible;
+    z-index: 1;
+    position: absolute;
+    top: 5.5rem;
 }
 
 #shoppingcart {
@@ -120,6 +123,7 @@ html {
 
 #shoppingcart:hover {
     opacity: 100%;
+    z-index: 1;
 }
 
 #headerbuttons {
@@ -158,29 +162,31 @@ html {
     margin: auto 0;
 }
 
-#bannerPromo1 {
+.bannerPromo {
     height: 90px;
+    width: 100%;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
-#bannerpromo img {
+.bannerPromo img {
     width: 100%;
-    display: flex;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
+    top: 0;
+    left: 0;
 }
 
-#bannerPromoText1 {
+.bannerPromoText {
     color: white;
-    width: 100%;
     font-size: 3.5rem;
-    position: absolute;
-    bottom: 0;
+    z-index: 1;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    top: 0;
 }
 
 
@@ -282,6 +288,83 @@ html {
     margin: 0px;
     align-items: center;
     justify-content: center;
+    color: black;
 }
 
+
+.footer {
+    background-color: rgb(206, 206, 206);
+    width: 100%;
+    height: 21rem;
+    margin-top: 0px;
+}
+
+.followUs h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 4.5rem;
+    align-items: center;
+    margin-bottom: .3rem;
+    margin-top: 0px;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+footer hr {
+    text-decoration: none;
+    border: .1rem solid white;
+    margin-top: 2rem;
+}
+
+hr {
+    color: black;
+    background-color: black;
+    border: black;
+    height: 1px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.newsletter label {
+    font-size: 1rem;
+}
+
+.newsletter input {
+    border-radius: 1rem;
+    width: 60%;
+}
+
+.footer .links {
+    display: flex;
+    font-size: 1.1rem;
+    gap: 1.1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.footer p,
+.footer a {
+    height: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.footer a:visited {
+    color: black;
+}
 
