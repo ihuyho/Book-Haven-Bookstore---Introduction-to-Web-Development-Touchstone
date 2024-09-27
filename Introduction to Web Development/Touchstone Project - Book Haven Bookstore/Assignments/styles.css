@@ -15,7 +15,8 @@ html {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
+   
 }
 
 #webtitle {
@@ -49,19 +50,6 @@ html {
 
 }
 
-/*change this min width to 480 after done and erase this message*/
-@media all and (min-width:480px) {
-    #fullmenu {
-        display: block;
-    }
-    #shoppingcart {
-        display: none;
-    }
-
-    #hamburgermenu{
-        display: none;
-    }
-}
 
 #hamburgermenuicon {
     display: flex;
@@ -128,8 +116,8 @@ html {
 
 #headerbuttons {
     display: flex;
-    
 }
+
 
 
 /*main promo*/
@@ -562,16 +550,98 @@ hr {
     margin-left: 1rem;
 }
 
- /*
- 
- text-overflow: ellipsis;
-    overflow: hidden;
-    text-wrap: nowrap;
-    width: 100%;
-    white-space: normal;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    
-    */
+/*desktop*/
 
+.headerNavigation,
+#headerNavigationLine {
+    display: none;
+}
+
+@media all and (min-width:480px) {
+    #webtitle {
+        font-size: 3rem;
+    }
+
+    #fullmenu {
+        display: block;
+    }
+
+    #shoppingcart i,
+    #shoppingcart {
+        display: none;
+        position: absolute;
+    }
+
+    #hamburgermenu{
+        display: none;
+        visibility:hidden;
+    }
+    
+    #headerbuttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        margin-left: 1rem;
+    }
+
+    #fullmenu {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    #fullmenu i {
+        font-size: 1.8rem;
+    }
+
+    
+
+}
+
+@media all and (min-width:863px) {
+    #headerNavigationLine {
+        display: block;
+    }
+
+    .headerNavigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: auto;
+    }
+
+    .headerNavigation h2 {
+        display: flex;
+        align-items: center;
+        height: 3rem;
+    }
+
+    .headerNavigation h2:not(#last) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        border-right: 1px solid;
+    }
+    
+    .headerNavigation #last {
+        padding-left: 1rem;
+    }
+
+    .firstImage {
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mainPromoText {
+        text-align: center;
+        width: 100%;
+        font-size: 6rem;
+        position: absolute;
+        left: auto;
+        right: auto;
+    }
+}
