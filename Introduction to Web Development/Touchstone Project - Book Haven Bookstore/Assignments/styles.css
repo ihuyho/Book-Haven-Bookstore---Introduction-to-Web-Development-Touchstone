@@ -187,9 +187,20 @@ html {
     height: 4rem;
 }
 
+.arrow {
+    display: none;
+}
 
+.seeMore {
+    display: none;
+}
 
-.carouselContainer {
+.container i {
+    display: none;
+    position: absolute;
+}
+
+.container .carouselContainer {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 30%;
@@ -203,7 +214,7 @@ html {
 }
 
 .carouselContainer .mediaElements {
-    width: 110px;
+    width: 11rem;
     display: flex;
     flex-direction: column;
     height: 27.5rem;
@@ -225,7 +236,7 @@ html {
 .carouselText {
     display: flex;
     flex-direction: column;
-    height: 9rem;
+    height: 8rem;
     margin-top: 0.5rem;
 }
 
@@ -387,7 +398,6 @@ hr {
 .description {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     border-radius: 2rem;
     width: 50%;
     align-items: center;
@@ -401,8 +411,6 @@ hr {
     font-size: 1.5rem;
     margin: 0.3rem 2rem 2rem;
     align-items: center;
-    
-
  }
 
  /*gallery*/
@@ -411,7 +419,6 @@ hr {
     flex-wrap: wrap;
     gap: 2rem;
     align-items: center;
-    
  }
 
  .item {
@@ -557,7 +564,7 @@ hr {
     display: none;
 }
 
-@media all and (min-width:480px) {
+@media all and (min-width:470px) {
     #webtitle {
         font-size: 3rem;
     }
@@ -596,11 +603,6 @@ hr {
         font-size: 1.8rem;
     }
 
-    
-
-}
-
-@media all and (min-width:863px) {
     #headerNavigationLine {
         display: block;
     }
@@ -644,4 +646,120 @@ hr {
         left: auto;
         right: auto;
     }
+
+    .primarySlider {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        overflow: visible;
+        height: auto;
+    }
+
+    .container button {
+        border: none;
+        background: none;
+    }
+
+    .container button:hover {
+        color: gray;
+    }
+
+    .container button:active {
+        color: red;
+    }
+
+    .container i {
+        display: contents;
+        font-size: 3rem;
+
+    }
+
+    .container .carouselContainer {
+        grid-auto-columns: 14vw;
+        grid-auto-flow: column;
+        width: 70%;
+        height: auto;
+        margin-bottom: 2rem;
+        gap: auto;
+    }
+
+    .container .carouselContainer .mediaElements {
+        width: 90%;
+        height: auto;
+        display: flex;
+        ;
+    }
+
+    .container .carouselContainer .mediaElements .carouselImage {
+        object-fit: contain;
+        ; 
+        height: 19.5vw;
+        overflow: inherit;
+    }
+
+    .container .carouselContainer .mediaElements .carouselImage img {
+        height: auto;
+    }
+
+    .container .carouselContainer .mediaElements .carouselText {
+        display: flex;
+        justify-content: flex-start;
+        overflow: visible;
+        ;
+        height: auto;
+    }
+
+    .container .carouselContainer .mediaElements .carouselText h2{
+        font-size: 1.8rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-wrap: nowrap;
+        width: 100%;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    .container .carouselContainer .mediaElements .carouselText p {
+        font-size: 1.4rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-wrap: nowrap;
+        width: 100%;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .buttonGrid {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .arrow {
+        display: flex;
+        height: auto;
+    }
+
+    .arrow .leftArrow,
+    .arrow .rightArrow {
+        margin-right: 3rem;
+        margin-left: 3rem;
+        height: 85%;
+    }
+
+    .seeMore {
+        display: none;
+        position: absolute;
+    }
+
 }
