@@ -242,12 +242,10 @@ html {
 
 .carouselText h2,
 .carouselText p {
+
     margin-bottom: 0px;
     margin-top: 0px;
     text-align: center;
-    justify-content: flex-end;
-    display: flex;
-    flex-direction: column;
 }
 
 .carouselText h2 {
@@ -265,6 +263,7 @@ html {
     font-size: 1.1rem;
     margin-top: 0.5rem;
 }
+
 
 .buttonGrid {
     display: grid;
@@ -401,6 +400,7 @@ hr {
     border-radius: 2rem;
     width: 50%;
     align-items: center;
+    border: 1px solid;
  }
 
 .descriptions h2 {
@@ -564,6 +564,14 @@ hr {
     display: none;
 }
 
+.headerNavigation a {
+    text-decoration: none;
+}
+
+.headerNavigation a:visited {
+    color: black;
+}
+
 @media all and (min-width:470px) {
     #webtitle {
         font-size: 3rem;
@@ -647,6 +655,26 @@ hr {
         right: auto;
     }
 
+    .primarySlider .carouselTitle {
+        height: 5vw;
+    }
+    
+    .primarySlider .carouselTitle h1 {
+        font-size: 3vw;
+    }
+
+    .categorySlider .carouselTitle{
+        height: 5vw;
+    }
+
+    .categorySlider .carouselTitle h1 {
+        font-size: 3vw;
+    }
+
+    .carouselContainer .mediaElements .carouselText .titleofbook h2 {
+        
+    }
+
     .primarySlider {
         display: flex;
         flex-direction: column;
@@ -698,7 +726,7 @@ hr {
 
     .container .carouselContainer .mediaElements .carouselImage {
         object-fit: contain;
-        ; 
+    
         height: 19.5vw;
         overflow: inherit;
     }
@@ -716,19 +744,19 @@ hr {
     }
 
     .container .carouselContainer .mediaElements .carouselText h2{
-        font-size: 1.8rem;
+        font-size: 1.3vw;
         text-overflow: ellipsis;
         overflow: hidden;
         text-wrap: nowrap;
         width: 100%;
         white-space: normal;
         display: -webkit-box;
-        -webkit-line-clamp: 1;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
     }
 
     .container .carouselContainer .mediaElements .carouselText p {
-        font-size: 1.4rem;
+        font-size: 1.1vw;
         text-overflow: ellipsis;
         overflow: hidden;
         text-wrap: nowrap;
@@ -743,6 +771,10 @@ hr {
         width: 60%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .categorySlider .buttonGrid h4 {
+        font-size: 1vw;
     }
 
     .arrow {
@@ -762,4 +794,12 @@ hr {
         position: absolute;
     }
 
+    .description {
+        width: 25%;
+    }
+
+    .description h2,
+    .description p {
+        font-size: 3rem;
+    }
 }
