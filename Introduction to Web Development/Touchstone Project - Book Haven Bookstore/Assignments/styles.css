@@ -392,6 +392,7 @@ hr {
     width: 100%;
     align-items: center;    
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .description {
@@ -657,10 +658,19 @@ hr {
 
     .primarySlider .carouselTitle {
         height: 5vw;
+        text-decoration: none;
     }
     
     .primarySlider .carouselTitle h1 {
         font-size: 3vw;
+    }
+
+    .primarySlider .carouselTitle a {
+        text-decoration: none;
+    }
+
+    .primarySlider .carouselTitle a:visited {
+        color: black;
     }
 
     .categorySlider .carouselTitle{
@@ -801,5 +811,54 @@ hr {
     .description h2,
     .description p {
         font-size: 3rem;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer i {
+        font-size: 1.5vw;
+        margin-top: 1vw;
+    }
+
+    .newsletter {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.9vw;
+    }
+
+    .newsletter label {
+        margin-right: 2vw;
+    }
+
+    .newsletter input {
+        height: 2vw;
+        font-size: 1vw;
+    }
+
+    .footer .followUs h2{
+        display: none;
+    }
+
+    .socialMedia i {
+        margin-top: 1.8vw;
+    }
+
+    .footer .followUs h2,
+    .newsletter label h2 {
+        font-size: 1.5vw;
+    }
+
+    .links {
+        height: auto;
+        
+    }
+
+    .links a,
+    .links p {
+        font-size: 1vw;
+        height: auto;
+        margin-bottom: .6vw;
     }
 }
