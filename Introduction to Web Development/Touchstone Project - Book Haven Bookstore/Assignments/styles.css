@@ -26,6 +26,11 @@ html {
     font-size: 1.6rem;
     font-weight: bold;
 }
+
+#webtitledesktop {
+    display: none;
+}
+
 #logosearch {
     display: flex;
     flex: 1;
@@ -573,10 +578,59 @@ hr {
     color: black;
 }
 
+@media all and (min-width: 800px) {
+    header {
+        margin-bottom: 1rem;
+    }
+
+    #webtitle {
+        display: none;
+    }
+
+    #webtitledesktop {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        white-space: nowrap;
+        height: 3.3vw;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #webtitledesktop h1 {
+        font-size: 3.5rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    #logosearch a img{
+        width: 3vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
+    #searchbar {
+        width: auto;
+    }
+
+    #searchbar form {
+        width: 26%;
+    }
+
+    #searchbar form input {
+        height: 1.5vw;
+        border-radius: 100rem;
+        font-size: .8vw;
+    }
+}
+
+
 @media all and (min-width:470px) {
     #webtitle {
         font-size: 3rem;
     }
+
 
     #fullmenu {
         display: block;
