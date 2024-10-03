@@ -10,12 +10,13 @@
 <body>
     <header>
         <div id="webtitle">Book Haven Bookstore</div>
+        <div id="webtitledesktop"><h1>Book Haven Bookstore</h1></div>
         <section class="header">
             <div id="logosearch">
                 <a href="./index.html"><img src="../Resources/logo.png" alt="book logo with flower in the middle" class="logo" id="headerlogo"/></a>
                 <div id="searchbar"> 
                     <form action="" method="get" autocomplete="on">
-                        <input type="text" name="search" placeholder=" Search authors, books, audiobooks, manga, etc.">
+                        <input type="text" name="search" placeholder="  Search authors, books, audiobooks, manga, etc.">
                     </form>
                 </div>
             </div>
@@ -24,9 +25,8 @@
                         <i class="fa-solid fa-user"></i>
                         <i class="fa-solid fa-heart"></i>
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <button>
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
+                        <i class="fa-solid fa-bars"></i>
+                        
                 </div>
                 <div id="shoppingcart">
                     <a href="index.html"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -56,614 +56,700 @@
         <img src="../Resources/stock image 2.jpg" alt="Bookshelf with old books."/>
         <h1 class="bannerPromoText">Book Binding Class</h1>
     </div>
-    <h1 style="display: flex; justify-content: center;">Bestselling Books</h1>
+    <div  class="bestsellertitlemobile">
+        <h1 style="display: flex; justify-content: center;">Bestselling Books</h1>
+    </div>
+    <h1 class="bestsellertitle">Bestselling Books</h1>
     <div class="filter">
         <button><i class="fa-sharp fa-solid fa-sliders"></i>  Filter</button>
     </div>
     <hr>
-   <div class="books">
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/say youll remember me.jpg" alt="Say You'll Remember Me by Katie McGarry cover"/>
+    <div class="grid">
+        <div class="categories">
+            <div class="categoryblock">
+                <div class="categorytitle">
+                    <h2>Categories</h2>
+                </div>
+                <div class="categorynames">
+                    <p>Non-Fiction</p>
+                    <p>Fiction</p>
+                    <p>Mystery / Thriller</p>
+                    <p>Fantasy</p>
+                    <p>Science Fiction</p>
+                    <p>Romance</p>
+                    <p>Young Adult</p>
+                    <p>Children</p>
+                    <p>Historical Fiction</p>
+                    <p>Self-Help</p>
+                </div>
             </div>
-            <div class="bookInfo">
-                <h2 class="title">Say You'll Remember Me</h2>
-                <p class="author">by <strong>Katie McGarry</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
+            <div class="categoryblock">
+                <div class="categorytitle">
+                    <h2>Format</h2>
+                </div>
+                <div class="categorynames">
+                    <p>Paperback</p>
+                    <p>Hardback</p>
+                    <p>Audiobook</p>
+                    <p>Boardback</p>
+                </div>
+            </div>
+            <div class="categoryblock">
+                <div class="categorytitle">
+                    <h2>Price</h2>
+                </div>
+                <div class="categorynames">
+                    <p>Under $5</p>
+                    <p>$5 - $10</p>
+                    <p>$10 - $20</p>
+                    <p>$30 - $40</p>
+                    <p>$40 - $50</p>
+                    <p>$50+</p>
+                </div>
+            </div>
+            <div class="categoryblock">
+                <div class="categorytitle">
+                    <h2>Age Interest</h2>
+                </div>
+                <div class="categorynames">
+                    <p>Pre-school</p>
+                    <p>Ages 5-8</p>
+                    <p>Ages 9-12</p>
+                    <p>Teen / Young Adult</p>
+                    <p>Adult</p>
+                </div>
+            </div>
+            <div class="categoryblock">
+                <div class="categorytitle">
+                    <h2>Language</h2>
+                </div>
+                <div class="categorynames">
+                    <p>English</p>
+                    <p>Spanish</p>
+                    <p>French</p>
+                    <p>Chinese</p>
+                    <p>German</p>
+                    <p>More</p>
+                </div>
+            </div>
+            <div class="categoryblock">
+                <div class="categorytitle">
+                    <h2>Region</h2>
+                </div>
+                <div class="categorynames">
+                    <p>North America</p>
+                    <p>South America</p>
+                    <p>Europe</p>
+                    <p>Asia</p>
+                    <p>Australia</p>
+                    <p>Africa</p>
+                </div>
+            </div>
+        </div>
+        <div class="books">
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/say youll remember me.jpg" alt="Say You'll Remember Me by Katie McGarry cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Say You'll Remember Me</h2>
+                    <p class="author">by <strong>Katie McGarry</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
                     </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/fahrenheit 182.webp" alt="Fahrenheit-182 by  cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Fahrenheit-182</h2>
+                    <p class="author">by <strong>Mark Hoppus</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
                     </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/fourth wing.jpg" alt="Fourth Wing by Rebecca Yarros cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Fourth Wing</h2>
+                    <p class="author">by <strong>Rebecca Yarros</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
                     </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/the book of bill.jpg" alt="The Book Of Bill by Alex Hirsch cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">The Book of Bill</h2>
+                    <p class="author">by <strong>Alex Hirsch</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/the pumpkin spice cafe.jpg" alt="The Pumpkin Spice Cafe by Laurie Gilmore cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">The Pumpkin Spice Cafe</h2>
+                    <p class="author">by <strong>Laurie Gilmore</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/master of me.jpg" alt="Master of Me: The Secret To Controlling Your Narrative by Keke Palmer cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Master of Me: The Secret To Controlling Your Narrative</h2>
+                    <p class="author">by <strong>Keke Palmer</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/blood of hercules.jpg" alt="Blood of Hercules by Jasmine Mas cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Blood of Hercules</h2>
+                    <p class="author">by <strong>Jasmine Mas</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/on freedom.jpg" alt="On Freedom by Timothy Snyder cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">On Freedom</h2>
+                    <p class="author">by <strong>Timothy Snyder</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/demon copperhead.jpg" alt="Demon Copperhead by Katie cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Demon Copperhead</h2>
+                    <p class="author">by <strong>Barbara Kingsolver</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/wrath of the triple goddess.jpg" alt="Wrath of the Triple Goddess by Katie cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Wrath of the Triple Goddess</h2>
+                    <p class="author">by <strong>Rick Riordan</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/charlie method.jpg" alt="The Charlie Method by Elle Kennedy cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">The Charlie Method</h2>
+                    <p class="author">by <strong>Elle Kennedy</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/last twilight in paris.jpg" alt="Last Twilight in Paris by Pam Jenoff cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Last Twilight in Paris</h2>
+                    <p class="author">by <strong>Pam Jenoff</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/spooky lakes.jpg" alt="Spooky Lakes: 25 Strange and Mysterious Lakes that Dot Our Planet by Geo Rutherford cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Spooky Lakes: 25 Strange and Mysterious Lakes that Dot Our Planet</h2>
+                    <p class="author">by <strong>Geo Rutherford</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/intermezzo.jpg" alt="Intermezzo by Sally Rooney cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Intermezzo</h2>
+                    <p class="author">by <strong>Sally Rooney</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/phantasma.jpg" alt="Phantasma by Kaylie Smith cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Phantasma</h2>
+                    <p class="author">by <strong>Kaylie Smith</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/butcher game.jpg" alt="The Butcher Game by  Alaina Urquhart cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">The Butcher Game</h2>
+                    <p class="author">by <strong> Alaina Urquhart</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/counting miracles.jpg" alt="Counting Miracles by Nicholas Sparks cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Counting Miracles</h2>
+                    <p class="author">by <strong>Nicholas Sparks</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/nothingg like the movies.jpg" alt="Nothing Like the Movies by Katie cover"/></div>
+                <div class="bookInfo">
+                    <h2 class="title">Nothing Like the Movies</h2>
+                    <p class="author">by <strong>Lynn Painter</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/bury our bones.jpg" alt="Bury Our Bones in the Midnight Soil by V. E. Schwab cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">Bury Our Bones in the Midnight Soil</h2>
+                    <p class="author">by <strong>V. E. Schwab</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book">
+                <h1></h1>
+                <div>
+                    <img src="../Resources/wild robot escapes.jpg" alt="The Wild Robot Escapes by Peter Brown cover"/>
+                </div>
+                <div class="bookInfo">
+                    <h2 class="title">The Wild Robot Escapes</h2>
+                    <p class="author">by <strong>Peter Brown</strong></p>
+                    <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
+                    <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy In store</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Buy Online</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Pick Up</p>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <p>Deliver</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/fahrenheit 182.webp" alt="Fahrenheit-182 by  cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Fahrenheit-182</h2>
-                <p class="author">by <strong>Mark Hoppus</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/fourth wing.jpg" alt="Fourth Wing by Rebecca Yarros cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Fourth Wing</h2>
-                <p class="author">by <strong>Rebecca Yarros</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/the book of bill.jpg" alt="The Book Of Bill by Alex Hirsch cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">The Book of Bill</h2>
-                <p class="author">by <strong>Alex Hirsch</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/the pumpkin spice cafe.jpg" alt="The Pumpkin Spice Cafe by Laurie Gilmore cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">The Pumpkin Spice Cafe</h2>
-                <p class="author">by <strong>Laurie Gilmore</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/master of me.jpg" alt="Master of Me: The Secret To Controlling Your Narrative by Keke Palmer cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Master of Me: The Secret To Controlling Your Narrative</h2>
-                <p class="author">by <strong>Keke Palmer</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/blood of hercules.jpg" alt="Blood of Hercules by Jasmine Mas cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Blood of Hercules</h2>
-                <p class="author">by <strong>Jasmine Mas</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/on freedom.jpg" alt="On Freedom by Timothy Snyder cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">On Freedom</h2>
-                <p class="author">by <strong>Timothy Snyder</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/demon copperhead.jpg" alt="Demon Copperhead by Katie cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Demon Copperhead</h2>
-                <p class="author">by <strong>Barbara Kingsolver</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/wrath of the triple goddess.jpg" alt="Wrath of the Triple Goddess by Katie cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Wrath of the Triple Goddess</h2>
-                <p class="author">by <strong>Rick Riordan</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/charlie method.jpg" alt="The Charlie Method by Elle Kennedy cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">The Charlie Method</h2>
-                <p class="author">by <strong>Elle Kennedy</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/last twilight in paris.jpg" alt="Last Twilight in Paris by Pam Jenoff cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Last Twilight in Paris</h2>
-                <p class="author">by <strong>Pam Jenoff</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/spooky lakes.jpg" alt="Spooky Lakes: 25 Strange and Mysterious Lakes that Dot Our Planet by Geo Rutherford cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Spooky Lakes: 25 Strange and Mysterious Lakes that Dot Our Planet</h2>
-                <p class="author">by <strong>Geo Rutherford</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/intermezzo.jpg" alt="Intermezzo by Sally Rooney cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Intermezzo</h2>
-                <p class="author">by <strong>Sally Rooney</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/phantasma.jpg" alt="Phantasma by Kaylie Smith cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Phantasma</h2>
-                <p class="author">by <strong>Kaylie Smith</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/butcher game.jpg" alt="The Butcher Game by  Alaina Urquhart cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">The Butcher Game</h2>
-                <p class="author">by <strong> Alaina Urquhart</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div> 
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/counting miracles.jpg" alt="Counting Miracles by Nicholas Sparks cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Counting Miracles</h2>
-                <p class="author">by <strong>Nicholas Sparks</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>  
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/nothingg like the movies.jpg" alt="Nothing Like the Movies by Katie cover"/></div>
-            <div class="bookInfo">
-                <h2 class="title">Nothing Like the Movies</h2>
-                <p class="author">by <strong>Lynn Painter</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>  
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/bury our bones.jpg" alt="Bury Our Bones in the Midnight Soil by V. E. Schwab cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">Bury Our Bones in the Midnight Soil</h2>
-                <p class="author">by <strong>V. E. Schwab</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div>
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="book">
-            <h1></h1>
-            <div>
-                <img src="../Resources/wild robot escapes.jpg" alt="The Wild Robot Escapes by Peter Brown cover"/>
-            </div>
-            <div class="bookInfo">
-                <h2 class="title">The Wild Robot Escapes</h2>
-                <p class="author">by <strong>Peter Brown</strong></p>
-                <p class="price">from <strong>$<span class="randomPrice"></span></strong></p>
-                <div class="button"><button class="add2cart"><p>ADD TO CART</p></button></div> 
-                <div class="checks">
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy In store</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Buy Online</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Pick Up</p>
-                    </div>
-                    <div class="check">
-                        <i class="fa-solid fa-check"></i>
-                        <p>Deliver</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-   </div>
-   <hr>
-   <footer>
+    </div>
+    <hr>
+    <footer>
         <div class="footer">
             <div class="followUs">
                 <h2>Follow Us!</h2>

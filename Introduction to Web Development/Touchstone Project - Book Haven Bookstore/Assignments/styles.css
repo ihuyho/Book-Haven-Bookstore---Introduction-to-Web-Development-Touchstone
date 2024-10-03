@@ -420,14 +420,14 @@ hr {
  }
 
  /*gallery*/
- .exclusiveItems {
+.exclusiveItems {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     align-items: center;
  }
 
- .item {
+.item {
     display: flex;
     flex-direction: column;
     align-items: center;  
@@ -438,19 +438,23 @@ hr {
 
  /*best sellers*/
 
- .filter {
+.filter {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
  }
 
- .filter button {
+.filter button {
     height: 3rem;
     width: 8rem;
     border-radius: 1.1rem;
- }
+}
 
- .books {
+.bestsellertitle {
+    display: none;
+}
+
+.books {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -461,14 +465,19 @@ hr {
     margin-top: 3rem;
  }
 
- .book {
+.book {
     display: flex;    
     width: 98%;
     gap: 2rem;
     margin-bottom: 3rem;
     height: 30rem;
- }
- .books {
+}
+
+.categories {
+    display: none;
+}
+
+.books {
     counter-reset: bookCounter; /* Initializes the counter */
 }
 
@@ -622,6 +631,72 @@ hr {
         height: 1.5vw;
         border-radius: 100rem;
         font-size: .8vw;
+    }
+
+    .pagename h1 {
+        font-size: 2rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: space-between;
+        
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .categorytitle {
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
+
+    .categorynames {
+        font-size: 2rem;
+        margin: .5rem;
+    }
+
+    .categorynames p {
+        margin: .75rem
+    }
+
+    .bestsellertitlemobile   {
+        display: none;
+    }
+
+    .bestsellertitle {
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+    }
+
+
+    .books {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        height: auto;
+        margin-right: 0px;
+        justify-content: flex-start;
+    }
+
+    .book {
+        width: 20vw;
+        min-width: 21vw;
+        flex: 1 1 20vw;
+
+    }
+
+    .bookInfo {
+        width: 10vw;
+        height: auto;
     }
 }
 
@@ -915,4 +990,6 @@ hr {
         height: auto;
         margin-bottom: .6vw;
     }
+
+
 }
