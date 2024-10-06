@@ -8,6 +8,15 @@ html {
     font-size: 62.4%;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited,
+a:link {
+    color: black;
+}
+
 #fullmenu {
     display: none;
 }
@@ -214,6 +223,7 @@ html {
     overflow-y: hidden;
 }
 
+
 .carouselContainer::-webkit-scrollbar {
     display: none;
 }
@@ -236,6 +246,34 @@ html {
     display: flex;
     object-fit: contain;
 
+}
+
+.carouselContainerEx {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 30%;
+    overflow-x: auto;;
+    height: auto;
+    overflow-y: hidden;
+}
+
+.carouselContainerEx .mediaElements {
+    width: 11rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.carouselContainerEx .mediaElements .carouselImage {
+    height: auto;
+    display: flex;
+}
+
+.carouselContainerEx .mediaElements .carouselImage img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: contain;
 }
 
 .carouselText {
@@ -269,6 +307,35 @@ html {
     margin-top: 0.5rem;
 }
 
+.carouselContainerEx {
+    overflow: hidden;
+}
+
+.carouselContainerEx .carouselText {
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    margin-top: 0.5rem;
+}
+
+.carouselContainerEx .carouselText h2,
+.carouselContainerEx .carouselText p {
+
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.carouselContainerEx .carouselText h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: nowrap;
+    width: 100%;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
 
 .buttonGrid {
     display: grid;
@@ -307,8 +374,9 @@ html {
     align-items: center;
 }
 
-.seemore p {
-   margin-top: 2rem;
+.seeMore p {
+   color: black;
+   border: none;
 }
 
 
@@ -417,26 +485,35 @@ hr {
     font-size: 1.5rem;
     margin: 0.3rem 2rem 2rem;
     align-items: center;
- }
+}
 
- /*gallery*/
+/*gallery*/
+
+.exclusive h1 {
+    text-align: center;
+    font-size: 2rem;
+}
 .exclusiveItems {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
- }
-
-.item {
-    display: flex;
     flex-direction: column;
-    align-items: center;  
-    width: 50%; 
-    object-fit: contain;
- }
+    margin: 0 auto;
+    width: 75%;
+}
 
+.exclusiveItems .item {
+    margin-bottom: 3rem;
+}
 
- /*best sellers*/
+.exclusiveItems .item img{
+    width: 100%;
+    align-items: center;
+}
+
+.exclusiveItems .item h2 {
+    text-align: center;
+}
+
+/*best sellers*/
 
 .filter {
     display: flex;
@@ -599,11 +676,13 @@ hr {
     #webtitledesktop {
         display: flex;
         position: absolute;
-        width: 100%;
+        width: auto;
         white-space: nowrap;
         height: 3.3vw;
         justify-content: center;
         align-items: center;
+        left: 50%;
+        right: 50%;
         
     }
 
@@ -786,12 +865,12 @@ hr {
     }
 
     .primarySlider .carouselTitle {
-        height: 5vw;
+        height: 4vw;
         text-decoration: none;
     }
     
     .primarySlider .carouselTitle h1 {
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
     .primarySlider .carouselTitle a {
@@ -803,16 +882,13 @@ hr {
     }
 
     .categorySlider .carouselTitle{
-        height: 5vw;
+        height: 4vw;
     }
 
     .categorySlider .carouselTitle h1 {
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
-    .carouselContainer .mediaElements .carouselText .titleofbook h2 {
-        
-    }
 
     .primarySlider {
         display: flex;
@@ -860,12 +936,10 @@ hr {
         width: 90%;
         height: auto;
         display: flex;
-        ;
     }
 
     .container .carouselContainer .mediaElements .carouselImage {
         object-fit: contain;
-    
         height: 19.5vw;
         overflow: inherit;
     }
@@ -878,7 +952,6 @@ hr {
         display: flex;
         justify-content: flex-start;
         overflow: visible;
-        ;
         height: auto;
     }
 
@@ -896,6 +969,51 @@ hr {
 
     .container .carouselContainer .mediaElements .carouselText p {
         font-size: 1.1vw;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-wrap: nowrap;
+        width: 100%;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .container .carouselContainerEx {
+        grid-auto-columns: 14vw;
+        grid-auto-flow: column;
+        width: 70%;
+        height: auto;
+        margin-bottom: 2rem;
+        gap: auto;
+        overflow: hidden;
+    }
+
+    .container .carouselContainerEx .mediaElements {
+        width: 90%;
+        height: auto;
+        display: flex;
+    }
+
+    .container .carouselContainerEx .mediaElements .carouselImage {
+        object-fit: contain;
+        height: 9vw;
+        overflow: inherit;
+    }
+
+    .container .carouselContainerEx .mediaElements .carouselImage img {
+        height: auto;
+    }
+
+    .container .carouselContainerEx .mediaElements .carouselText {
+        display: flex;
+        justify-content: flex-start;
+        overflow: visible;
+        height: auto;
+    }
+
+    .container .carouselContainerEx .mediaElements .carouselText h2{
+        font-size: 1.3vw;
         text-overflow: ellipsis;
         overflow: hidden;
         text-wrap: nowrap;
@@ -991,5 +1109,44 @@ hr {
         margin-bottom: .6vw;
     }
 
+    .exclusive h1 {
+        text-align: center;
+        font-size: 3rem;
+    }
 
+    .exclusiveItems {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        flex-wrap: wrap;
+    }
+
+    .exclusiveItems .item {
+        width: 30%;
+        height: auto;
+        margin-right: auto;
+        margin: 1rem;
+    }
+
+    .exclusiveItems .item img {
+        width: 23vw;
+    }
+
+    .exclusiveItems .item h2 {
+        height: auto;
+        font-size: 2rem;
+        text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-wrap: nowrap;
+        width: 100%;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
 }

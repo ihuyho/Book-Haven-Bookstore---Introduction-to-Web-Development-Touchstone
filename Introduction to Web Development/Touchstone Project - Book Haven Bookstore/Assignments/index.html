@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <div id="webtitle">Book Haven Bookstore</div>
-        <div id="webtitledesktop"><h1>Book Haven Bookstore</h1></div>
+        <a href="index.html"><div id="webtitle">Book Haven Bookstore</div></a>
+        <a href="index.html"><div id="webtitledesktop"><h1>Book Haven Bookstore</h1></div></a>
         <section class="header">
             <div id="logosearch">
                 <a href="./index.html"><img src="../Resources/logo.png" alt="book logo with flower in the middle" class="logo" id="headerlogo"/></a>
@@ -1695,6 +1695,143 @@
         <h1 class="bannerPromoText">Join Our Growing Book Clubs!</h1>
     </div>
     <hr>
+    <div class="primarySlider" data-category="exclusives">
+        <div class="carouselTitle">
+            <a href="gallery.html"><h1>Book Haven Eclusives</h1></a>
+        </div>
+        <div class="container">
+            <div class="arrow">
+                <button class="leftArrow">
+                    <i class="fa-solid fa-less-than"></i>
+                </button>
+            </div>
+            <div class="carouselContainerEx">
+                <div class="mediaElements">
+                    <div class="carouselImage">
+                        <img src="../Resources/Client3_Book1.png" alt="Brie Mine 4ever book"/>
+                    </div>
+                    <div class="carouselText">
+                        <div class="titleofbook">
+                            <h2>Brie Mine 4ever</h2>
+                        </div>
+                        <div class="authorofbook">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mediaElements">
+                    <div class="carouselImage">
+                        <img src="../Resources/Client3_Book2.png" alt="Glory Riders book"/>
+                    </div>
+                    <div class="carouselText">
+                        <div class="titleofbook">
+                            <h2>Glory Riders</h2>
+                        </div>
+                        <div class="authorofbook">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mediaElements">
+                    <div class="carouselImage">
+                        <img src="../Resources/Client3_Book3.png" alt="Sorcerer's Shadowed Chronicles book"/>
+                    </div>
+                    <div class="carouselText">
+                        <div class="titleofbook">
+                            <h2>Sorcerer's Shadowed Chronicles</h2>
+                        </div>
+                        <div class="authorofbook">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mediaElements">
+                    <div class="carouselImage">
+                        <img src="../Resources/Client3_Magazine1.png" alt="Ball magazine" />
+                    </div>
+                    <div class="carouselText">
+                        <div class="titleofbook">
+                            <h2>Ball</h2>
+                        </div>
+                        <div class="authorofbook">
+                            <p></p>
+                        </div>  
+                    </div>
+                </div>
+                <div class="mediaElements">
+                    <div class="carouselImage">
+                        <img src="../Resources/Client3_Magazine2.png" alt="Travel magazine"/>
+                    </div>
+                    <div class="carouselText">
+                        <div class="titleofbook">
+                            <h2>Travel</h2>
+                        </div>
+                        <div class="authorofbook">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mediaElements">
+                    <div class="carouselImage">
+                        <img src="../Resources/Client3_Magazine3.png" alt="Eat magazine"/>
+                    </div>
+                    <div class="carouselText">
+                        <div class="titleofbook">
+                            <h2>Eat</h2>
+                        </div>
+                        <div class="authorofbook">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mediaElements">
+                    <div class="carouselImage">
+                        <img src="../Resources/Client3_Notebook.png" alt="Book Haven Bookstore Notebook"/>
+                    </div>
+                    <div class="carouselText">
+                        <div class="titleofbook">
+                            <h2>Book Haven Bookstore Notebook</h2>
+                        </div>
+                        <div class="authorofbook">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mediaElements">
+                    <div class="carouselImage">
+                        <img src="../Resources/Client3_Stickers.png" alt="four stickers"/>
+                    </div>
+                    <div class="carouselText">
+                        <div class="titleofbook">
+                            <h2>Stickers</h2>
+                        </div>
+                        <div class="authorofbook">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mediaElements">
+                    <div class="carouselImage">
+                        <img src="../Resources/Client3_ToteBag.png" alt="four stickers"/>
+                    </div>
+                    <div class="carouselText">
+                        <div class="titleofbook">
+                            <h2>Stickers</h2>
+                        </div>
+                        <div class="authorofbook">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow">
+                <button class="rightArrow">
+                    <i class="fa-solid fa-greater-than"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <hr>
     <footer>
         <div class="footer">
             <div class="followUs">
@@ -1756,21 +1893,21 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             const sliders = document.querySelectorAll('.primarySlider');
-            const leftArrows = document.querySelectorAll('.leftArrow');
-            const rightArrows = document.querySelectorAll('.rightArrow');
 
-            sliders.forEach((slider, index) => {
+            sliders.forEach((slider) => {
                 const carouselContainer = slider.querySelector('.carouselContainer');
+                const leftArrow = slider.querySelector('.leftArrow');  // Use local arrow within the slider
+                const rightArrow = slider.querySelector('.rightArrow');
                 const scrollAmount = 300;
 
-                leftArrows[index].addEventListener('click', () => {
+                leftArrow.addEventListener('click', () => {
                     carouselContainer.scrollBy({
                         left: -scrollAmount,
                         behavior: 'smooth'
                     });
                 });
 
-                rightArrows[index].addEventListener('click', () => {
+                rightArrow.addEventListener('click', () => {
                     carouselContainer.scrollBy({
                         left: scrollAmount,
                         behavior: 'smooth'

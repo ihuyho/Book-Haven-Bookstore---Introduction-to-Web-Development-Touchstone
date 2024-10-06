@@ -9,13 +9,14 @@
 </head>
 <body>
     <header>
-        <div id="webtitle">Book Haven Bookstore</div>
+        <a href="index.html"><div id="webtitle">Book Haven Bookstore</div></a>
+        <a href="index.html"><div id="webtitledesktop"><h1>Book Haven Bookstore</h1></div></a>
         <section class="header">
             <div id="logosearch">
-                <img src="../Resources/logo.png" alt="book logo with flower in the middle" class="logo" id="headerlogo"/>
+                <a href="./index.html"><img src="../Resources/logo.png" alt="book logo with flower in the middle" class="logo" id="headerlogo"/></a>
                 <div id="searchbar"> 
                     <form action="" method="get" autocomplete="on">
-                        <input type="text" name="search" placeholder=" Search authors, books, audiobooks, manga, etc.">
+                        <input type="text" name="search" placeholder="  Search authors, books, audiobooks, manga, etc.">
                     </form>
                 </div>
             </div>
@@ -24,9 +25,8 @@
                         <i class="fa-solid fa-user"></i>
                         <i class="fa-solid fa-heart"></i>
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <button>
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
+                        <i class="fa-solid fa-bars"></i>
+                        
                 </div>
                 <div id="shoppingcart">
                     <a href="index.html"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -52,29 +52,38 @@
         </section>
     </header>
     <hr>
+    <div class="firstImage">
+        <img src="../Resources/stock image 1.jpg" alt="Two people looking at books at a bookstore."/>
+        <h1 id="mainPromoText">Books up to 20% off!</h1>
+    </div>
+    <hr>
+    <div class="bannerPromo">
+        <img src="../Resources/stock image 2.jpg" alt="Bookshelf with old books."/>
+        <h1 class="bannerPromoText">Book Binding Class</h1>
+    </div>
+    <hr>
     <div class="exclusive">
         <h1>Exclusive Book Haven Items</h1>
     </div>
     <div class="exclusiveItems">
         <div class="item">
-            <img style="object-fit: cover; width: 18rem; height: 18rem;" src="../Resources/Client3_Book1.png"/>
+            <img src="../Resources/Client3_Book1.png"/>
             <h2>Brie Mine 4ever</h2>
         </div>
-        
         <div class="item">
-            <img style="object-fit: cover; width: 18rem; height: 18rem;" src="../Resources/Client3_Book2.png"/>
+            <img src="../Resources/Client3_Book2.png"/>
             <h2>Glory Riders</h2>
         </div>
         <div class="item">
-            <img style="object-fit: cover; width: 18rem; height: 18rem;" src="../Resources/Client3_Book3.png"/>
+            <img src="../Resources/Client3_Book3.png"/>
             <h2>Sorcerer's Shadowed Chronicles</h2>
         </div>
         <div class="item">
-            <img style="object-fit: cover; width: 18rem; height: 18rem;" src="../Resources/Client3_Notebook.png"/>
+            <img src="../Resources/Client3_Notebook.png"/>
             <H2>Book Haven Bookstore Notebook</H2>
         </div>
         <div class="item">
-            <img style="object-fit: cover; width: 22.5rem; height: 18rem;" src="../Resources/Client3_Magazine1.png"/>
+            <img src="../Resources/Client3_Magazine1.png"/>
             <h2>BALL</h2>
         </div>
         <div class="item">
@@ -89,5 +98,40 @@
             <img src="../Resources/Client3_Stickers.png"/>
             <h2>Stickers</h2>
         </div>
+        <div class="item">
+            <img src="../Resources/Client3_ToteBag.png"/>
+            <h2>Tote Bag</h2>
+        </div>
     </div>
+    <footer>
+        <div class="footer">
+            <div class="followUs">
+                <h2>Follow Us!</h2>
+                <div class="socialMedia">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+            <hr>
+            <div class="newsletter">
+                <label for="email">
+                    <h2>Sign Up For Our Newsletter!</h2>
+                </label>
+                <input type="email" class="signup" placeholder="  Enter your e-mail">
+            </div>
+            <hr>
+            <div class="links">
+                <a href="about.html">About Us</a>
+                <p>|</p>
+                <a href="">Terms and Conditions</a>
+                <p >|</p>
+                <a href="">Careers</a>
+                <p>|</p>
+                <a href="">Privacy Notice</a>
+            </div>
+        </div>
+    </footer>
     
