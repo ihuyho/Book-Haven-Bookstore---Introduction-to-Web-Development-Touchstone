@@ -1916,6 +1916,44 @@
             });
         });
 
+        document.addEventListener('DOMContentLoaded', function () {
+            const primarySliders = document.querySelectorAll('.primarySlider');
+
+            primarySliders.forEach((slider) => {
+                const carouselContainer = slider.querySelector('.carouselContainerEx');
+                const leftArrow = slider.querySelector('.leftArrow');
+                const rightArrow = slider.querySelector('.rightArrow');
+                const scrollAmount = 300; 
+
+                if (leftArrow && rightArrow && carouselContainer) {
+                    // Arrow navigation
+                    leftArrow.addEventListener('click', () => {
+                        carouselContainer.scrollBy({
+                            left: -scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    rightArrow.addEventListener('click', () => {
+                        carouselContainer.scrollBy({
+                            left: scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    // Enable Shift + Scroll for horizontal scrolling
+                    carouselContainer.addEventListener('wheel', (e) => {
+                        if (e.shiftKey) { 
+                            e.preventDefault(); // Prevent vertical scrolling
+                            carouselContainer.scrollBy({
+                                left: e.deltaY,
+                            });
+                        }
+                    });
+                }
+            });
+        });
+
         function updateArrowListeners(visibleContainer) {
             const leftArrow = document.querySelector('.categorySlider .leftArrow');
             const rightArrow = document.querySelector('.categorySlider .rightArrow');
