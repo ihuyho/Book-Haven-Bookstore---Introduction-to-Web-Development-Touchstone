@@ -1,5 +1,12 @@
 /*header section*/
 
+@font-face {
+    font-family: Comfortaa;
+    src: url('../Font/Comfortaa-VariableFont_wght.ttf') format('ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,7 +16,23 @@ h1 {
 }
 
 h2 {
-    font-family: ;
+   font-family: Comfortaa, sans-serif;
+}
+
+p, h4, a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a h1:hover, a h2:hover, a:hover {
+    color: #742c36;
+}
+
+button:hover {
+    color: #742c36;
+}
+
+.check p {
+    font-size: ;
 }
 
 html {
@@ -350,22 +373,21 @@ a:link {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
     margin-bottom: 2rem;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .buttonGrid button {
-    height: 4rem;
+    height: auto;
+    min-height: 3rem;
     border-radius: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+
 }
 
-.buttonGrid button h4 {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    margin: 0px;
-    align-items: center;
-    justify-content: center;
-    color: black;
-}
+
 
 .seeMore {
     display: flex;
@@ -1038,8 +1060,21 @@ hr {
         margin-right: auto;
     }
 
-    .categorySlider .buttonGrid h4 {
-        font-size: 1vw;
+    .buttonGrid button {
+        height: 2rem;
+        min-height: 4rem;
+        border-radius: 1rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2rem;
+        overflow: hidden;
+        text-wrap: nowrap;
+        width: 100%;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        margin-bottom: 0.5rem;
+        line-height: 3rem;
     }
 
     .arrow {
