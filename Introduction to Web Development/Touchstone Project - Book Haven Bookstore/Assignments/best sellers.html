@@ -24,7 +24,10 @@
                 <div id="fullmenu">
                         <i class="fa-solid fa-user"></i>
                         <i class="fa-solid fa-heart"></i>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div class="cart">
+                            <i id="cart" class="fa-solid fa-cart-shopping"></i>
+                            <p class="cartcount">0</p>
+                        </div>
                         <i class="fa-solid fa-bars"></i>
                         
                 </div>
@@ -808,6 +811,22 @@
         window.onload = function() {
             setBookPrices();
         };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let cartCountElement = document.querySelector('.cartcount');
+
+            let cartCount = 0;
+
+            let addToCartButtons = document.querySelectorAll('.add2cart');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    cartCount++;
+                    
+                    cartCountElement.textContent = cartCount;
+                });
+            });
+        });
    </script>
    
 </body>
