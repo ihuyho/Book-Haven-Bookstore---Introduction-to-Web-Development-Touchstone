@@ -834,49 +834,61 @@
         };
 
         document.addEventListener('DOMContentLoaded', function() {
+            const cartButton = document.querySelector('#cart');
+            const closeCartButton = document.querySelector('#closeCart');
+            const cartWindow = document.querySelector('#cartWindow');
+
+            cartButton.addEventListener('click', function () {
+                cartWindow.classList.add('open');
+            });
+
+            closeCartButton.addEventListener('click', function() {
+                cartWindow.classList.remove('open');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
             let cartCountElement = document.querySelector('.cartcount');
             let cartItemsContainer = document.querySelector('#cartItems');
-
-            let cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+            
+            let cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []
             let cartCount = cartItems.length;
             cartCountElement.textContent = cartCount;
 
-            function renderCartItems () {
+            function renderCartItems() {
                 cartItemsContainer.innerHTML = '';
 
                 cartItems.forEach(item => {
                     let cartItem = document.createElement('div');
                     cartItem.classList.add('book');
                     cartItem.innerHTML = `
-                        <div class="book">
+                    <div class="book">
                         <div>
-                            <img src="${bookImage}" alt="${bookTitle}">
+                            <img src="${item.image}" alt="${item.title} cover">
                         </div>
                         <div class="bookInfo">
-                            <h2>${bookTitle}</h2>
-                            <p class="author">by <strong>${bookAuthor}</strong></p>
-                            <p class="price"><strong>${bookPrice}</strong></p>
+                            <h2>${item.title}</h2>
+                            <p class="author">by <strong>${item.author}</strong></p>
+                            <p class="price">from <strong>${item.price}</p>
                         </div>
+                    </div>
                     `;
-                    cartItemsContainer.appendChild(cartItem)
+                    cartItemsContainer.appendChild(cartItem);
                 });
             }
 
             renderCartItems();
 
             let addToCartButtons = document.querySelectorAll('.add2cart');
-
             addToCartButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     cartCount++;
                     cartCountElement.textContent = cartCount;
 
-                    localStorage.setItem('cartCount', cartCount)
-
                     let book = button.closest('.book');
                     let bookImage = book.querySelector('img').src;
                     let bookTitle = book.querySelector('.title').textContent;
-                    let bookAuthor = book.querySelector('.author strong').textContent;
+                    let bookAuthor = book.querySelector('.author').textContent;
                     let bookPrice = book.querySelector('.price strong').textContent;
 
                     let newCartItem = {
@@ -893,15 +905,16 @@
                     let cartItem = document.createElement('div');
                     cartItem.classList.add('book');
                     cartItem.innerHTML = `
-                        <div class="book">
+                    <div class="book">
                         <div>
-                            <img src="${bookImage}" alt="${bookTitle}">
+                            <img src="${bookImage}" alt="${bookTitle} cover">
                         </div>
                         <div class="bookInfo">
                             <h2>${bookTitle}</h2>
                             <p class="author">by <strong>${bookAuthor}</strong></p>
-                            <p class="price"><strong>${bookPrice}</strong></p>
+                            <p class="price">from <strong>${bookPrice}</p>
                         </div>
+                    </div>
                     `;
 
                     cartItemsContainer.appendChild(cartItem);
@@ -918,7 +931,7 @@
                 cartWindow.classList.add('open');
             });
 
-            closeCartButton.addEventListener('click', function() {
+            closeCartButton.addEventListener('click', function () {
                 cartWindow.classList.remove('open');
             });
         });

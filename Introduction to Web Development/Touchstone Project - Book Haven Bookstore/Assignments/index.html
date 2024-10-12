@@ -1944,10 +1944,9 @@
                         });
                     });
 
-                    // Enable Shift + Scroll for horizontal scrolling
                     carouselContainer.addEventListener('wheel', (e) => {
                         if (e.shiftKey) { 
-                            e.preventDefault(); // Prevent vertical scrolling
+                            e.preventDefault();
                             carouselContainer.scrollBy({
                                 left: e.deltaY,
                             });
@@ -1963,14 +1962,12 @@
 
             const scrollAmount = 300;
 
-            // Remove any existing arrow listeners (if any) to prevent stacking
             leftArrow.replaceWith(leftArrow.cloneNode(true));
             rightArrow.replaceWith(rightArrow.cloneNode(true));
 
             const newLeftArrow = document.querySelector('.categorySlider .leftArrow');
             const newRightArrow = document.querySelector('.categorySlider .rightArrow');
 
-            // Add event listeners for the newly shown category container
             newLeftArrow.addEventListener('click', () => {
                 visibleContainer.scrollBy({
                     left: -scrollAmount,
@@ -1986,13 +1983,13 @@
             });
         }
 
-    
+
         let cartCountElement = document.querySelector('.cartcount');
       
         let cartCount = 0;
 
         let addToCartButtons = document.querySelectorAll('.add2cart');
-n
+
         addToCartButtons.forEach(button => {
             button.addEventListener('click', function() {
                 cartCount++;
