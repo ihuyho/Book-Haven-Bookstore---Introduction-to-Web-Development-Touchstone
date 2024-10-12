@@ -53,6 +53,27 @@
                 </div>
             </div>
         </section>
+        <div id="cartWindow">
+            <div id="cartHeader">
+                <h2>
+                    Your Shopping Cart
+                </h2>
+                <button id="closeCart">
+                    X
+                </button>
+            </div>
+            <div id="cartItems">
+
+            </div>
+            <div id="cartActions">
+                <button id="clearCart">
+                    Clear All
+                </button>
+                <button id="continnuePayment">
+                    Continue to Payment
+                </button>
+            </div>
+        </div>
     </header>
     <hr>
     <div class="bannerPromo">
@@ -814,21 +835,94 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             let cartCountElement = document.querySelector('.cartcount');
+            let cartItemsContainer = document.querySelector('#cartItems');
 
-            let cartCount = 0;
+            let cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+            let cartCount = cartItems.length;
+            cartCountElement.textContent = cartCount;
+
+            function renderCartItems () {
+                cartItemsContainer.innerHTML = '';
+
+                cartItems.forEach(item => {
+                    let cartItem = document.createElement('div');
+                    cartItem.classList.add('book');
+                    cartItem.innerHTML = `
+                        <div class="book">
+                        <div>
+                            <img src="${bookImage}" alt="${bookTitle}">
+                        </div>
+                        <div class="bookInfo">
+                            <h2>${bookTitle}</h2>
+                            <p class="author">by <strong>${bookAuthor}</strong></p>
+                            <p class="price"><strong>${bookPrice}</strong></p>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(cartItem)
+                });
+            }
+
+            renderCartItems();
 
             let addToCartButtons = document.querySelectorAll('.add2cart');
 
             addToCartButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     cartCount++;
-                    
                     cartCountElement.textContent = cartCount;
+
+                    localStorage.setItem('cartCount', cartCount)
+
+                    let book = button.closest('.book');
+                    let bookImage = book.querySelector('img').src;
+                    let bookTitle = book.querySelector('.title').textContent;
+                    let bookAuthor = book.querySelector('.author strong').textContent;
+                    let bookPrice = book.querySelector('.price strong').textContent;
+
+                    let newCartItem = {
+                        image: bookImage,
+                        title: bookTitle,
+                        author: bookAuthor,
+                        price: bookPrice
+                    };
+
+                    cartItems.push(newCartItem);
+
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+                    let cartItem = document.createElement('div');
+                    cartItem.classList.add('book');
+                    cartItem.innerHTML = `
+                        <div class="book">
+                        <div>
+                            <img src="${bookImage}" alt="${bookTitle}">
+                        </div>
+                        <div class="bookInfo">
+                            <h2>${bookTitle}</h2>
+                            <p class="author">by <strong>${bookAuthor}</strong></p>
+                            <p class="price"><strong>${bookPrice}</strong></p>
+                        </div>
+                    `;
+
+                    cartItemsContainer.appendChild(cartItem);
+
+                    localStorage.setItem('cartCount', cartCount);
                 });
+            });
+
+            const cartButton = document.querySelector('#cart');
+            const closeCartButton = document.querySelector('#closeCart');
+            const cartWindow = document.querySelector('#cartWindow');
+
+            cartButton.addEventListener('click', function () {
+                cartWindow.classList.add('open');
+            });
+
+            closeCartButton.addEventListener('click', function() {
+                cartWindow.classList.remove('open');
             });
         });
    </script>
    
 </body>
-    
     

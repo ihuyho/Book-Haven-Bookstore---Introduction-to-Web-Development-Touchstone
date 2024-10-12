@@ -200,7 +200,9 @@ a:link {
     display: flex;
 }
 
-
+#cartWindow {
+    display: hidden;
+}
 
 /*main promo*/
 
@@ -589,6 +591,8 @@ hr {
 
 /*best sellers*/
 
+
+
 .filter {
     display: flex;
     justify-content: center;
@@ -614,7 +618,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
- }
+}
 
 .book {
     display: flex;    
@@ -633,21 +637,21 @@ hr {
 }
 
 .book h1::before {
-    counter-increment: bookCounter; /* Increments the counter for each .book */
-    content: counter(bookCounter) "."; /* Displays the counter value */
+    counter-increment: bookCounter;
+    content: counter(bookCounter) ".";
 }
 
- .book img {
+.book img {
     width: 15rem;
     height: auto;
- }
+}
 
- .bookInfo {
+.bookInfo {
     width: 100%;
- }
+}
 
 
- .bookInfo h2 {
+.bookInfo h2 {
     font-size: 1.8rem;
     overflow: hidden;
     text-wrap: nowrap;
@@ -657,37 +661,37 @@ hr {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     margin-bottom: 0.5rem;
- }
+}
 
- .bookInfo .author {
+.bookInfo .author {
     font-size: 1.4rem;
     margin-top: 0rem;
- }
+}
 
- .bookInfo .price {
+.bookInfo .price {
     font-size: 2rem;
- }
+}
  
- .bookInfo .button {
+.bookInfo .button {
     display: flex;
     justify-content: center;
- }
+}
 
- .bookInfo button {
+.bookInfo button {
     width: 80%;
     height: 4rem;
     border-radius: 1.1rem;
     background-color: #3f5461;
- }
+}
 
- .bookInfo button p {
+.bookInfo button p {
     margin-top: auto;
     margin-bottom: auto;
     color: #fdfdfd;
     animation: pulse 2s infinite;
- }
+}
 
- @keyframes pulse {
+@keyframes pulse {
     0% {
         transform: scale(1);
     }
@@ -722,6 +726,8 @@ hr {
     margin-bottom: 0;
     margin-left: 1rem;
 }
+
+
 
 /*desktop*/
 
@@ -831,25 +837,71 @@ hr {
 
 
     .books {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
         height: auto;
-        margin-right: 0px;
-        justify-content: flex-start;
+        
     }
 
     .book {
         width: 20vw;
         min-width: 21vw;
         flex: 1 1 20vw;
+        margin-right: 0px;    
 
     }
 
     .bookInfo {
         width: 10vw;
         height: auto;
+    }
+
+    #cart {
+        cursor: pointer;
+    }
+
+    #cartWindow {
+        border: 1px solid;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 25%;
+        height: 100%;
+        background-color: rgb(236, 236, 236);
+        z-index: 100;
+        transition: right 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #cartHeader {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #f4f4f4;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    #cartItems {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+    #cartActions {
+        padding: 20px;
+        border-top: 1px solid #ddd;
+    }
+    
+    #cartActions button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    #cartWindow.open {
+        right: 0;
     }
 }
 
