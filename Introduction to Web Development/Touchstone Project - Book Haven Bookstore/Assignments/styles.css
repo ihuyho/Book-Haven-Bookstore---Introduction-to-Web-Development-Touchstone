@@ -903,6 +903,37 @@ hr {
     #cartWindow.open {
         right: 0;
     }
+
+    .quantityControl {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .quantityControl .controls {
+        display: flex;
+        width: 100%;
+        height: 2.5vw;
+        justify-content: center;
+    }
+
+    .quantityControl .quantity {
+        display: flex;
+        border: 1px solid gray;
+        background-color: white;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5vw;
+    }
+
+    .quantityControl .removeItem {
+        width: 100%;
+    }
+
 }
 
 

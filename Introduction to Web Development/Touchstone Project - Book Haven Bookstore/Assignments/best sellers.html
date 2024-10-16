@@ -816,7 +816,6 @@
             const books = document.querySelectorAll('.book');
             books.forEach((book, index) => {
                 const bookId = index + 1; 
-                book.setAttribute('data-book-id', bookId); 
                 const priceKey = `bookPrice_${bookId}`;
                 let storedPrice = localStorage.getItem(priceKey);
 
@@ -845,7 +844,17 @@
             closeCartButton.addEventListener('click', function() {
                 cartWindow.classList.remove('open');
             });
+
+            document.addEventListener('click', function (event) {
+                const isClickInside = cartWindow.contains(event.target) || cartButton.contains(event.target);
+
+                if (!isClickInside) {
+                    cartWindow.classList.remove('open');
+                }
+            });
         });
+
+        
 
         document.addEventListener('DOMContentLoaded', function () {
             let cartCountElement = document.querySelector('.cartcount');
@@ -859,23 +868,72 @@
             function renderCartItems() {
                 cartItemsContainer.innerHTML = '';
 
-                cartItems.forEach(item => {
+                cartItems.forEach((item, index) => {
+
+                    if (!item.quantity) {
+                        item.quantity = 1;
+                    }
+
                     let cartItem = document.createElement('div');
                     cartItem.classList.add('book');
                     cartItem.innerHTML = `
                     <div class="book">
                         <div>
                             <img src="${item.image}" alt="${item.title} cover">
+                            <div class="quantityControl">
+                                <div class="controls">
+                                    <button class="decrement">-</button>
+                                    <div class="quantity">
+                                        <p>${item.quantity}</p>
+                                    </div>
+                                    <button class="increment">+</button>
+                                </div>
+                                <button class="removeItem">Remove</button>
+                            </div>
+                            
                         </div>
                         <div class="bookInfo">
                             <h2>${item.title}</h2>
                             <p class="author">by <strong>${item.author}</strong></p>
-                            <p class="price">from <strong>${item.price}</p>
+                            <p class="price">from <strong>${item.price}</strong></p>
                         </div>
                     </div>
                     `;
+
                     cartItemsContainer.appendChild(cartItem);
+
+                    cartItem.querySelector('.increment').addEventListener('click',function () {
+                        item.quantity++;
+                        cartItem.querySelector('.quantity').textContent = item.quantity;
+                        updateCartItems();
+                    });
+
+                    cartItem.querySelector('.decrement').addEventListener('click', function () {
+                        if (item.quantity > 1) {
+                            item.quantity --;
+                            cartItem.querySelector('.quantity').textContent = item.quantity;
+                            updateCartItems();
+                        }
+                    });
+
+                    cartItem.querySelector('.removeItem').addEventListener('click', function () {
+                        event.stopPropagation();
+                        cartItems.splice(index, 1);
+                        renderCartItems();
+                        updateCartCount();
+                        updateCartItems();
+                    });
                 });
+            }
+
+            function updateCartItems () {
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            }
+
+            function updateCartCount () {
+                cartCount = cartItems.length;
+                cartCountElement.textContent = cartCount;
+                localStorage.setItem('cartCount', cartCount)
             }
 
             renderCartItems();
@@ -890,37 +948,28 @@
                     let bookImage = book.querySelector('img').src;
                     let bookTitle = book.querySelector('.title').textContent;
                     let bookAuthor = book.querySelector('.author').textContent;
-                    let bookPrice = book.querySelector('.price strong').textContent;
+                    let bookPrice = book.querySelector('.randomPrice').textContent;
 
-                    let newCartItem = {
-                        image: bookImage,
-                        title: bookTitle,
-                        author: bookAuthor,
-                        price: bookPrice
-                    };
+                    let existingItemIndex = cartItems.findIndex(item => item.title === bookTitle && item.author === bookAuthor);
 
-                    cartItems.push(newCartItem);
-
+                    if (existingItemIndex > -1) {
+                        cartItems[existingItemIndex].quantity++;
+                    } else {
+                        let newCartItem = {
+                            image: bookImage,
+                            title: bookTitle,
+                            author: bookAuthor,
+                            price: bookPrice,
+                            quantity: 1
+                        };
+                        cartItems.push(newCartItem);
+                    }
+                    
                     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-                    let cartItem = document.createElement('div');
-                    cartItem.classList.add('book');
-                    cartItem.innerHTML = `
-                    <div class="book">
-                        <div>
-                            <img src="${bookImage}" alt="${bookTitle} cover">
-                        </div>
-                        <div class="bookInfo">
-                            <h2>${bookTitle}</h2>
-                            <p class="author">by <strong>${bookAuthor}</strong></p>
-                            <p class="price">from <strong>${bookPrice}</p>
-                        </div>
-                    </div>
-                    `;
-
-                    cartItemsContainer.appendChild(cartItem);
-
+                    cartCount ++;
                     localStorage.setItem('cartCount', cartCount);
+                    renderCartItems();
+                    
                 });
             });
 
@@ -929,9 +978,10 @@
                 localStorage.removeItem('cartCount');
 
                 cartItemsContainer.innerHTML = '';
-                cartCountelement.textContent = 0;
+                cartCountElement.textContent = 0;
 
                 cartItems = [];
+                cartCount = 0;
             });
 
             const cartButton = document.querySelector('#cart');
