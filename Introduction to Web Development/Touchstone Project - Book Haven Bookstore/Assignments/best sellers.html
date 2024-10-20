@@ -26,7 +26,7 @@
                         <i class="fa-solid fa-heart"></i>
                         <div class="cart">
                             <i id="cart" class="fa-solid fa-cart-shopping"></i>
-                            <p class="cartcount">0</p>
+                            <p class="cartcount"></p>
                         </div>
                         <i class="fa-solid fa-bars"></i>
                         
@@ -66,6 +66,9 @@
 
             </div>
             <div id="cartActions">
+                <div id="cartSubtotal">
+                    Subtotal: $0.00
+                </div>
                 <button id="clearCart">
                     Clear All
                 </button>
@@ -860,10 +863,12 @@
             let cartCountElement = document.querySelector('.cartcount');
             let cartItemsContainer = document.querySelector('#cartItems');
             let clearCartButton = document.querySelector('#clearCart');
+            let subtotalElement = document.querySelector('#cartSubtotal');
             
-            let cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []
-            let cartCount = cartItems.length;
-            cartCountElement.textContent = cartCount;
+            let cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+            
+            updateCartCount();
+            updateSubtotal();
 
             function renderCartItems() {
                 cartItemsContainer.innerHTML = '';
@@ -890,7 +895,6 @@
                                 </div>
                                 <button class="removeItem">Remove</button>
                             </div>
-                            
                         </div>
                         <div class="bookInfo">
                             <h2>${item.title}</h2>
@@ -902,17 +906,19 @@
 
                     cartItemsContainer.appendChild(cartItem);
 
-                    cartItem.querySelector('.increment').addEventListener('click',function () {
+                    cartItem.querySelector('.increment').addEventListener('click', function () {
                         item.quantity++;
                         cartItem.querySelector('.quantity').textContent = item.quantity;
                         updateCartItems();
+                        updateSubtotal();
                     });
 
                     cartItem.querySelector('.decrement').addEventListener('click', function () {
                         if (item.quantity > 1) {
-                            item.quantity --;
+                            item.quantity--;
                             cartItem.querySelector('.quantity').textContent = item.quantity;
                             updateCartItems();
+                            updateSubtotal();
                         }
                     });
 
@@ -922,6 +928,7 @@
                         renderCartItems();
                         updateCartCount();
                         updateCartItems();
+                        updateSubtotal();
                     });
                 });
             }
@@ -931,9 +938,26 @@
             }
 
             function updateCartCount () {
-                cartCount = cartItems.length;
-                cartCountElement.textContent = cartCount;
-                localStorage.setItem('cartCount', cartCount)
+                let cartCount = cartItems.length;
+
+                if (cartCount > 0) {
+                    cartCountElement.textContent = '';
+                    cartCountElement.style.display = 'block';
+                } else {
+                    cartCountElement.style.display = 'none';
+                }
+
+                localStorage.setItem('cartCount', cartCount);
+            }
+
+            function updateSubtotal() {
+                let subtotal = 0;
+
+                cartItems.forEach(item => {
+                    subtotal += parseFloat(item.price) * item.quantity;
+                });
+
+                subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
             }
 
             renderCartItems();
@@ -941,9 +965,6 @@
             let addToCartButtons = document.querySelectorAll('.add2cart');
             addToCartButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    cartCount++;
-                    cartCountElement.textContent = cartCount;
-
                     let book = button.closest('.book');
                     let bookImage = book.querySelector('img').src;
                     let bookTitle = book.querySelector('.title').textContent;
@@ -965,11 +986,10 @@
                         cartItems.push(newCartItem);
                     }
                     
-                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-                    cartCount ++;
-                    localStorage.setItem('cartCount', cartCount);
+                    updateCartItems();
+                    updateCartCount();
+                    updateSubtotal();
                     renderCartItems();
-                    
                 });
             });
 
@@ -978,10 +998,9 @@
                 localStorage.removeItem('cartCount');
 
                 cartItemsContainer.innerHTML = '';
-                cartCountElement.textContent = 0;
-
                 cartItems = [];
-                cartCount = 0;
+                updateCartCount();
+                updateSubtotal();
             });
 
             const cartButton = document.querySelector('#cart');
